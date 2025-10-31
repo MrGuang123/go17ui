@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-import { Button, Header, Page, useTheme } from "@go17/components";
+import { Button, Header, Page, defaultThemes, useTheme } from "@go17/components";
 
 import {
   formatDemoTemplate,

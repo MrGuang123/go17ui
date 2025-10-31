@@ -54,7 +54,8 @@ const demoTranslations = {
     theme: {
       names: {
         light: "Light",
-        dark: "Dark"
+        dark: "Dark",
+        coinmarket: "CoinMarket"
       }
     }
   },
@@ -111,7 +112,8 @@ const demoTranslations = {
     theme: {
       names: {
         light: "浅色",
-        dark: "深色"
+        dark: "深色",
+        coinmarket: "CoinMarket 风格"
       }
     }
   }

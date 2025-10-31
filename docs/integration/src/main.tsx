@@ -5,13 +5,18 @@ import { ThemeProvider } from "@go17/components";
 import { usePrefersColorMode } from "@go17/hooks";
 
 import App from "./App";
+import { integrationThemes } from "./themes";
 import "./index.css";
 
 const Root = () => {
   const preferred = usePrefersColorMode();
 
   return (
-    <ThemeProvider initialTheme={preferred} applyToDocument>
+    <ThemeProvider
+      initialTheme={preferred}
+      themes={integrationThemes}
+      applyToDocument
+    >
       <App />
     </ThemeProvider>
   );
