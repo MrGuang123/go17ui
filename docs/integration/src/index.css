@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply antialiased transition-colors;
+  background-color: var(--go17-surface-background);
+  color: var(--go17-text-primary);
+}

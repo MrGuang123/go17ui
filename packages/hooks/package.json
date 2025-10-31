@@ -1,0 +1,47 @@
+{
+  "name": "@go17/hooks",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Go17 reusable React hooks",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --clean",
+    "test": "vitest",
+    "lint": "eslint \"src/**/*.{ts,tsx}\""
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.3.0",
+    "@types/react": "^19.0.1",
+    "@types/node": "^24.9.2",
+    "@eslint/js": "^9.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.1",
+    "react": "^19.0.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

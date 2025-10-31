@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@go17/components": ["../../packages/components/src/index.ts"],
+      "@go17/components/*": ["../../packages/components/src/*"],
+      "@go17/hooks": ["../../packages/hooks/src/index.ts"],
+      "@go17/hooks/*": ["../../packages/hooks/src/*"]
+    }
+  },
+  "include": [".storybook/**/*", "stories"]
+}

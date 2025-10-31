@@ -1,0 +1,20 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  // "json.schemaDownload.enable": false,
+  // "json.schemas": [
+  //   {
+  //     "fileMatch": [
+  //       ".prettierrc",
+  //       ".prettierrc.json",
+  //       "package.json#/prettier"
+  //     ],
+  //     "url": "./.vscode/prettierrc.schema.json"
+  //   }
+  // ],
+  // "yaml.schemaStore.enable": false,
+  // "yaml.schemas": {
+  //   "./.vscode/pnpm-workspace.schema.json": [
+  //     "pnpm-workspace.yaml"
+  //   ]
+  // }
+}

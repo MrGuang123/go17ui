@@ -1,0 +1,13 @@
+{
+  "name": "go17ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Go17 UI monorepo workspace",
+  "scripts": {
+    "build": "pnpm --filter ./packages/* run build",
+    "test": "pnpm --filter ./packages/* run test",
+    "lint": "pnpm --filter ./packages/* run lint",
+    "storybook": "pnpm --filter docs-storybook storybook",
+    "integration": "pnpm --filter docs-integration dev"
+  }
+}
