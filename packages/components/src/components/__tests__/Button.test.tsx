@@ -11,9 +11,20 @@ describe("Button", () => {
   });
 
   it("applies variant specific classes", () => {
-    render(<Button variant="secondary">Action</Button>);
+    render(<Button variant="success">Success</Button>);
 
-    const button = screen.getByRole("button", { name: "Action" });
-    expect(button.className).toContain("border");
+    const button = screen.getByRole("button", { name: "Success" });
+    expect(button.className).toContain("bg-[var(--go17-button-success-bg)]");
+  });
+
+  it("supports capsule shape", () => {
+    render(
+      <Button variant="warning" shape="pill">
+        Capsule
+      </Button>
+    );
+
+    const button = screen.getByRole("button", { name: "Capsule" });
+    expect(button.className).toContain("rounded-[var(--go17-radius-pill)]");
   });
 });

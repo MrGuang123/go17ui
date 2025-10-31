@@ -49,7 +49,11 @@ const demoTranslations = {
       secondary: "Secondary action",
       learnMore: "Learn more",
       large: "Large button",
-      small: "Small button"
+      small: "Small button",
+      success: "Successful",
+      warning: "Warning",
+      danger: "Danger",
+      pill: "Capsule button"
     },
     theme: {
       names: {
@@ -107,7 +111,11 @@ const demoTranslations = {
       secondary: "次要操作",
       learnMore: "了解更多",
       large: "大按钮",
-      small: "小按钮"
+      small: "小按钮",
+      success: "成功",
+      warning: "警告",
+      danger: "失败",
+      pill: "胶囊按钮"
     },
     theme: {
       names: {

@@ -148,6 +148,14 @@ const App = () => {
             {messages.buttons.learnMore}
           </Button>
         </div>
+        <div className="flex flex-wrap gap-4">
+          <Button variant="success">{messages.buttons.success}</Button>
+          <Button variant="warning">{messages.buttons.warning}</Button>
+          <Button variant="danger">{messages.buttons.danger}</Button>
+          <Button variant="primary" shape="pill">
+            {messages.buttons.pill}
+          </Button>
+        </div>
       </section>
     </Page>
   );

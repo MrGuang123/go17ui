@@ -41,6 +41,36 @@ export const Secondary: Story = {
   }
 };
 
+export const Success: Story = {
+  args: {
+    variant: "success"
+  },
+  render: (args, { globals }) => {
+    const translations = getStoryTranslations(globals.locale);
+    return <Button {...args}>{translations.buttons.success}</Button>;
+  }
+};
+
+export const Warning: Story = {
+  args: {
+    variant: "warning"
+  },
+  render: (args, { globals }) => {
+    const translations = getStoryTranslations(globals.locale);
+    return <Button {...args}>{translations.buttons.warning}</Button>;
+  }
+};
+
+export const Danger: Story = {
+  args: {
+    variant: "danger"
+  },
+  render: (args, { globals }) => {
+    const translations = getStoryTranslations(globals.locale);
+    return <Button {...args}>{translations.buttons.danger}</Button>;
+  }
+};
+
 export const Large: Story = {
   args: {
     size: "lg"
@@ -58,5 +88,16 @@ export const Small: Story = {
   render: (args, { globals }) => {
     const translations = getStoryTranslations(globals.locale);
     return <Button {...args}>{translations.buttons.small}</Button>;
+  }
+};
+
+export const Pill: Story = {
+  args: {
+    variant: "primary",
+    shape: "pill"
+  },
+  render: (args, { globals }) => {
+    const translations = getStoryTranslations(globals.locale);
+    return <Button {...args}>{translations.buttons.pill}</Button>;
   }
 };
