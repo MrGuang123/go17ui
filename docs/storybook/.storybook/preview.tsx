@@ -3,9 +3,18 @@ import type { Decorator } from "@storybook/react";
 
 import { ThemeProvider, defaultThemes } from "@go17/components";
 
+import { sharedThemes } from "../../shared/themes";
 import "./preview.css";
 
-const availableThemes = Object.keys(defaultThemes);
+const availableThemes = [
+  ...new Set([...Object.keys(defaultThemes), ...Object.keys(sharedThemes)])
+];
+
+const themeTitles: Record<string, string> = {
+  light: "Light",
+  dark: "Dark",
+  coinmarket: "CoinMarket"
+};
 
 export const globalTypes = {
   theme: {
@@ -16,7 +25,7 @@ export const globalTypes = {
       icon: "circlehollow",
       items: availableThemes.map((value) => ({
         value,
-        title: value.charAt(0).toUpperCase() + value.slice(1)
+        title: themeTitles[value] ?? value
       }))
     }
   },
@@ -37,7 +46,7 @@ export const globalTypes = {
 const withTheme: Decorator = (Story, context) => {
   const currentTheme = (context.globals.theme as string) ?? "light";
   return (
-    <ThemeProvider theme={currentTheme} applyToDocument>
+    <ThemeProvider theme={currentTheme} themes={sharedThemes} applyToDocument>
       <Story />
     </ThemeProvider>
   );
