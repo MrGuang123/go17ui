@@ -4,6 +4,8 @@ import { fn } from "storybook/test";
 
 import { Button } from "@go17/components";
 
+import { getStoryTranslations } from "./utils/i18n";
+
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: "Components/Button",
@@ -23,28 +25,38 @@ type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
-  args: {
-    children: "Primary action"
+  render: (args, { globals }) => {
+    const translations = getStoryTranslations(globals.locale);
+    return <Button {...args}>{translations.buttons.primary}</Button>;
   }
 };
 
 export const Secondary: Story = {
   args: {
-    variant: "secondary",
-    children: "Secondary"
+    variant: "secondary"
+  },
+  render: (args, { globals }) => {
+    const translations = getStoryTranslations(globals.locale);
+    return <Button {...args}>{translations.buttons.secondary}</Button>;
   }
 };
 
 export const Large: Story = {
   args: {
-    size: "lg",
-    children: "Large button"
+    size: "lg"
+  },
+  render: (args, { globals }) => {
+    const translations = getStoryTranslations(globals.locale);
+    return <Button {...args}>{translations.buttons.large}</Button>;
   }
 };
 
 export const Small: Story = {
   args: {
-    size: "sm",
-    children: "Small button"
+    size: "sm"
+  },
+  render: (args, { globals }) => {
+    const translations = getStoryTranslations(globals.locale);
+    return <Button {...args}>{translations.buttons.small}</Button>;
   }
 };

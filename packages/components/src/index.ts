@@ -15,3 +15,11 @@ export type {
   ThemeName,
   ThemeProviderProps
 } from "./theme";
+export {
+  getComponentTranslations
+} from "./i18n/translations";
+export type {
+  SupportedLocale,
+  LocaleMessages,
+  AllComponentTranslations
+} from "./i18n/translations";

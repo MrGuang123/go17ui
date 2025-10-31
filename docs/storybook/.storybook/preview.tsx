@@ -19,6 +19,18 @@ export const globalTypes = {
         title: value.charAt(0).toUpperCase() + value.slice(1)
       }))
     }
+  },
+  locale: {
+    name: "Locale",
+    description: "Language for story content",
+    defaultValue: "en",
+    toolbar: {
+      icon: "globe",
+      items: [
+        { value: "en", title: "English" },
+        { value: "zh-CN", title: "简体中文" }
+      ]
+    }
   }
 };
 

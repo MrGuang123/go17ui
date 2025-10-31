@@ -14,5 +14,5 @@
       "@go17/hooks/*": ["../../packages/hooks/src/*"]
     }
   },
-  "include": ["vite.config.ts", "src"]
+  "include": ["vite.config.ts", "src", "../shared/**/*"]
 }

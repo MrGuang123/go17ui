@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "@go17/components";
-import { Header } from "@go17/components";
+import { Button, Header } from "@go17/components";
+
+import { getStoryTranslations } from "./utils/i18n";
 
 const meta = {
   title: "Layout/Header",
@@ -18,19 +19,30 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LoggedIn: Story = {
-  args: {
-    title: "Go17 UI",
-    navigation: [
-      { label: "Components", href: "#" },
-      { label: "Hooks", href: "#" },
-      { label: "Themes", href: "#" }
-    ],
-    actions: <Button variant="primary">New project</Button>
+  render: (args, { globals }) => {
+    const translations = getStoryTranslations(globals.locale);
+
+    return (
+      <Header
+        {...args}
+        title={translations.brand.name}
+        navigation={[
+          { label: translations.navigation.components, href: "#" },
+          { label: translations.navigation.hooks, href: "#" },
+          { label: translations.navigation.themes, href: "#" }
+        ]}
+        actions={
+          <Button variant="primary">{translations.actions.newProject}</Button>
+        }
+      />
+    );
   }
 };
 
 export const Minimal: Story = {
-  args: {
-    title: "Go17 UI"
+  render: (args, { globals }) => {
+    const translations = getStoryTranslations(globals.locale);
+
+    return <Header {...args} title={translations.brand.name} />;
   }
 };

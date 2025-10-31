@@ -13,6 +13,9 @@ export default [
         project: "./tsconfig.json",
         ecmaVersion: "latest",
         sourceType: "module"
+      },
+      globals: {
+        window: "readonly"
       }
     },
     plugins: {

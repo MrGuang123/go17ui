@@ -12,5 +12,5 @@
       "@go17/hooks/*": ["../../packages/hooks/src/*"]
     }
   },
-  "include": [".storybook/**/*", "stories"]
+  "include": [".storybook/**/*", "stories", "../shared/**/*"]
 }
