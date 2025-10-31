@@ -8,6 +8,11 @@
     "test": "pnpm --filter ./packages/* run test",
     "lint": "pnpm --filter ./packages/* run lint",
     "storybook": "pnpm --filter docs-storybook storybook",
-    "integration": "pnpm --filter docs-integration dev"
+    "integration": "pnpm --filter docs-integration dev",
+    "release": "lerna version",
+    "publish:packages": "lerna publish from-package"
+  },
+  "devDependencies": {
+    "lerna": "^7.4.2"
   }
 }
